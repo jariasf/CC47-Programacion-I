@@ -8,17 +8,17 @@ Algoritmo EstadoAlumno
   Si nota_final < 12.5 Entonces
     // Entrar [0, 12.4999]
     // Salida
-    Escribir "El alumno está desaprobado"
+    Escribir "El alumno estÃ¡ desaprobado"
   SiNo
     // -> [12.5, x]
-	//Si nota_final >= 12.5 y nota_final <= 20 Entonces  // No es del todo necesario evaluar nota_final >= 12.5
+    //Si nota_final >= 12.5 y nota_final <= 20 Entonces  // No es del todo necesario evaluar nota_final >= 12.5
     Si nota_final <= 20 Entonces  
-		// Salida
-		Escribir "El alumno está aprobado"
-	SiNo
-		// Salida
-		Escribir "La nota es inválida"
-	Fin Si
+      // Salida
+      Escribir "El alumno estÃ¡ aprobado"
+    SiNo
+      // Salida
+      Escribir "La nota es invÃ¡lida"
+    Fin Si
   Fin Si
 
 FinAlgoritmo
