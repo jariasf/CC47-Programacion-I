@@ -22,7 +22,7 @@ void calcularPromedioFinal(int num_alumnos) {
         promedio = calcularPromedio(alumno);
         cout << "Su promedio final es: " << promedio << endl;
         alumno++;
-	}
+    }
 }
 
 int main() {

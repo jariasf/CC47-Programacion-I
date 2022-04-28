@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
     int numero, contador = 0, mayor, menor, positivos = 0, negativos = 0;
-	while (true) {
+    while (true) {
         cout << "Ingrese un numero: ";
         cin >> numero;
         if (numero == 0) {
