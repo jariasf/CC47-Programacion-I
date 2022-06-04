@@ -18,7 +18,6 @@ void generarYMostrarDatos(int *vpuntajes, int n) {
     }
 }
 
-
 void listaDebajoDelPromedio(int *vpuntajes, int n) {
     cout << "\nPuntajes debajo de promedio general" << endl;
 
@@ -44,11 +43,20 @@ de alumnos que obtuvieron el menor puntaje.
 int cantidadMenores(int *vpuntajes, int n) {
     int menor, cantidad;
     // TODO: 1. Hallar la menor nota
-    menor = ...;
+    menor = vpuntajes[0];
+    for (int i = 1; i < n; ++i) {
+        if (menor > vpuntajes[i]) {
+            menor = vpuntajes[i];
+        }
+    }
 
-	// TODO: 2. Contar todas las que sean iguales a la menor nota anteriormente hallada
+    // TODO: 2. Contar todas las que sean iguales a la menor nota anteriormente hallada
     cantidad = 0;
-
+    for (int i = 0; i < n; ++i) {
+        if (vpuntajes[i] == menor) {
+            cantidad++;
+        }
+    }
     return cantidad;
 }
 
@@ -60,7 +68,7 @@ int main() {
     generarYMostrarDatos(vpuntajes, n);
     listaDebajoDelPromedio(vpuntajes, n);
 
-    cout << "\nCantidad de alumnos que obtuvieron la menor nota es " << ... << endl;
+    cout << "\nCantidad de alumnos que obtuvieron la menor nota es " << cantidadMenores(vpuntajes, n) << endl;
     delete[]vpuntajes;
     return 0;
 }
